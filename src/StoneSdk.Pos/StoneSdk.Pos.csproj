@@ -53,6 +53,15 @@
     <TransformFile Include="Transforms\EnumFields.xml" />
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <LibraryProjectZip Include="Jars\stone-sdk-posandroid-3.4.3.aar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StoneSdk\StoneSdk.csproj">
+      <Project>{8a6d485b-2669-4fc0-aaeb-2c9d415aacf4}</Project>
+      <Name>StoneSdk</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
