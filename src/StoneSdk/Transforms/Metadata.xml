@@ -6,4 +6,12 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+	<remove-node path="/api/package[@name='stone.utils']/class[@name='PinpadObject']/method[@name='compareTo']" />
+	<remove-node path="/api/package[@name='stone.environment.factory']/class[@name='AuthorizeFactory']/method[@name='getEnvironment']" />
+	<remove-node path="/api/package[@name='stone.environment.factory']/class[@name='TmsFactory']/method[@name='getEnvironment']" />
+
+	<remove-node path="/api/package[@name='stone.converter']/class[@name='LoggerErrorListConverter']" />
+	<remove-node path="/api/package[@name='stone.converter']/class[@name='LoggerUserModelConverter']" />
+
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Brand']/field[@name='brand']" name="managedName">BrandEnum</attr>
 </metadata>
