@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoneSdk", "src\StoneSdk\St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoneSdk.Pos", "src\StoneSdk.Pos\StoneSdk.Pos.csproj", "{E8D9B37B-1F96-4044-8407-9BB25425B84E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoneSdk.Pos.Ingenico", "src\StoneSdk.Pos.Ingenico\StoneSdk.Pos.Ingenico.csproj", "{0EBDF710-0244-425B-9140-C730893A7EB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E8D9B37B-1F96-4044-8407-9BB25425B84E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8D9B37B-1F96-4044-8407-9BB25425B84E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8D9B37B-1F96-4044-8407-9BB25425B84E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EBDF710-0244-425B-9140-C730893A7EB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EBDF710-0244-425B-9140-C730893A7EB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EBDF710-0244-425B-9140-C730893A7EB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EBDF710-0244-425B-9140-C730893A7EB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
