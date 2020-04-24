@@ -1,0 +1,14 @@
+Binding for:
+br.com.stone:stone-sdk-posandroid-ingenico:3.4.3
+
+Dependencies:
+
+stone-sdk-posandroid-ingenico-3.4.3.jar,    Path=C:\Users\rmira\.gradle\caches\modules-2\files-2.1\br.com.stone\stone-sdk-posandroid-ingenico\3.4.3\80eb24590f9379942ca2f08b52dba0845bbeb6e5\stone-sdk-posandroid-ingenico-3.4.3.jar
+	payment-domain-lib-2.6.5.jar,    Path=C:\Users\rmira\.gradle\caches\modules-2\files-2.1\br.com.stone\payment-domain-lib\2.6.5\4c13b47b101444e2145f5719a60e99100c6fe92e\payment-domain-lib-2.6.5.jar
+	posandroid-ingenico-emvlib-2.6.5.aar,    Path=C:\Users\rmira\.gradle\caches\modules-2\files-2.1\br.com.stone\posandroid-ingenico-emvlib\2.6.5\90730e7a6285ba8617839d8c374a780959b8dca6\posandroid-ingenico-emvlib-2.6.5.aar
+	xstream-1.4.7.jar,    Path=C:\Users\rmira\.gradle\caches\modules-2\files-2.1\com.thoughtworks.xstream\xstream\1.4.7\bce3282142b63068260f021fcbe48b72e8d71a1a\xstream-1.4.7.jar
+	kotlin-stdlib-common-1.3.31.jar,    Path=C:\Users\rmira\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-common\1.3.31\20c34a04ea25cb1ef0139598bd67c764562cb170\kotlin-stdlib-common-1.3.31.jar
+	kotlin-stdlib-jdk7-1.3.31.jar,    Path=C:\Users\rmira\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jdk7\1.3.31\e652770b6416c6d85934086899ffed3eccd35813\kotlin-stdlib-jdk7-1.3.31.jar
+	kotlin-stdlib-1.3.31.jar,    Path=C:\Users\rmira\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.3.31\11289d20fd95ae219333f3456072be9f081c30cc\kotlin-stdlib-1.3.31.jar
+	annotations-13.0.jar,    Path=C:\Users\rmira\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar
+	slf4j-api-1.7.26.jar,    Path=C:\Users\rmira\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.26\77100a62c2e6f04b53977b9f541044d7d722693d\slf4j-api-1.7.26.jar
