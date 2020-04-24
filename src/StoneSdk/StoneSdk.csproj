@@ -42,9 +42,6 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Additions\AuthorizeFactory.cs" />
-    <Compile Include="Additions\PinpadObject.cs" />
-    <Compile Include="Additions\TmsFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
