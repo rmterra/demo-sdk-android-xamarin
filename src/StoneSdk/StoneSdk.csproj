@@ -48,8 +48,55 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <LibraryProjectZip Include="Jars\db-framework-1.1.1.aar" />
+    <LibraryProjectZip Include="Jars\db-1.1.1.aar" />
+    <LibraryProjectZip Include="Jars\client-version-sdk-integration.aar" />
+    <LibraryProjectZip Include="Jars\domain-version-sdk-integration.aar" />
+    <LibraryProjectZip Include="Jars\constraint-layout-1.0.2.aar" />
+    <LibraryProjectZip Include="Jars\animated-vector-drawable-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\appcompat-v7-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\asynclayoutinflater-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\coordinatorlayout-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\cursoradapter-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\customview-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\documentfile-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\drawerlayout-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\interpolator-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\analytics-11.6.0.aar" />
+    <None Include="..\..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="Jars\AboutJars.txt" />
     <None Include="Additions\AboutAdditions.txt" />
+    <LibraryProjectZip Include="Jars\stone-sdk-3.4.3.aar" />
+    <LibraryProjectZip Include="Jars\runtime-1.1.1.aar" />
+    <LibraryProjectZip Include="Jars\livedata-core-1.1.1.aar" />
+    <LibraryProjectZip Include="Jars\livedata-1.1.1.aar" />
+    <LibraryProjectZip Include="Jars\viewmodel-1.1.1.aar" />
+    <LibraryProjectZip Include="Jars\rxjava2-1.1.1.aar" />
+    <LibraryProjectZip Include="Jars\logger-contract-0.1.1.aar" />
+    <LibraryProjectZip Include="Jars\logger-0.1.1.aar" />
+    <LibraryProjectZip Include="Jars\provider-flurry-0.1.1.aar" />
+    <LibraryProjectZip Include="Jars\receiptgenerator-1.0.0rc12.aar" />
+    <LibraryProjectZip Include="Jars\loader-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\localbroadcastmanager-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\print-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\slidingpanelayout-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\support-compat-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\support-core-ui-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\support-core-utils-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\support-fragment-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\support-vector-drawable-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\swiperefreshlayout-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\versionedparcelable-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\viewpager-28.0.0.aar" />
+    <LibraryProjectZip Include="Jars\play-services-base-16.1.0.aar" />
+    <LibraryProjectZip Include="Jars\play-services-basement-16.2.0.aar" />
+    <LibraryProjectZip Include="Jars\play-services-tasks-16.0.1.aar" />
+    <LibraryProjectZip Include="Jars\timber-4.7.1.aar" />
+    <LibraryProjectZip Include="Jars\serviceconnector-1.0.5.aar" />
+    <LibraryProjectZip Include="Jars\rxandroid-2.0.1.aar" />
+    <LibraryProjectZip Include="Jars\koin-android-2.0.1.aar" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Transforms\Metadata.xml" />
@@ -57,7 +104,82 @@
     <TransformFile Include="Transforms\EnumMethods.xml" />
   </ItemGroup>
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\stone-sdk-3.4.3.aar" />
+    <ReferenceJar Include="Jars\common-1.1.1.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\android-sharedlib-2.6.5.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\payment-core-lib-2.6.5.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\payment-domain-lib-2.6.5.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\constraint-layout-solver-1.0.2.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\collections-28.0.0.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\support-annotations-28.0.0.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\gson-2.8.5.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\parceler-api-1.0.0.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\remoter-annotations-1.1.7.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\okhttp-3.9.1.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\okio-1.13.0.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\xstream-1.4.7.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\commons-codec-1.10.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\rxjava-2.1.16.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\rxkotlin-2.2.0.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\kotlin-stdlib-common-1.3.41.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\kotlin-stdlib-jdk7-1.3.41.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\kotlin-stdlib-jre7-1.2.71.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\kotlin-stdlib-1.3.41.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\annotations-16.0.1.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\koin-core-2.0.1.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\reactive-streams-1.0.2.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\slf4j-api-1.7.26.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferenceJar Include="Jars\xpp3_min-1.1.4c.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Jars\GeneratedBindingInfo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
