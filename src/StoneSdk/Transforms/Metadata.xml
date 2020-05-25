@@ -6,4 +6,213 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+	
+	<!--Fix type-->
+	<attr path="/api/package[@name='stone.utils']/class[@name='PinpadObject']/method[@name='compareTo']/parameter[@name='otherPinpad']" name="type">Java.Lang.Object</attr>
+	
+	<!--Fix return types-->
+	<attr path="/api/package[@name='stone.environment.factory']/class[@name='AuthorizeFactory']/method[@name='getEnvironment']" name="return">Stone.Environment.Interfaces.IEnvironmentServices</attr>
+	<attr path="/api/package[@name='stone.environment.factory']/class[@name='TmsFactory']/method[@name='getEnvironment']" name="return">Stone.Environment.Interfaces.IEnvironmentServices</attr>
+
+	<!--Fix interface implementations-->
+	
+	<add-node path="/api/package[@name='stone.controllers']/class[@name='FallbackControllerImpl']">
+		<method abstract="false" deprecated="not deprecated" final="false" name="SetFallbackListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+			<parameter name="fallbackListener" type="Stone.Controllers.IFallbackControllerFallbackListener">
+			</parameter>
+		</method>
+	</add-node>
+
+	<add-node path="/api/package[@name='stone.controllers']/class[@name='FallbackControllerImpl']">
+		<method abstract="false" deprecated="not deprecated" final="false" name="GetFallbackStep" native="false" return="Stone.Controllers.FallbackControllerFallbackStep" static="false" synchronized="false" visibility="public">
+		</method>
+	</add-node>
+
+	<!--Remove unnecessary package-->
+	<remove-node path="/api/package[@name='stone.converter']" />
+	<remove-node path="/api/package[@name='stone.application.bootloader']" />
+	<remove-node path="/api/package[@name='stone.repository.activation']" />
+	<remove-node path="/api/package[@name='stone.repository.transaction.source']" />
+	<!--<remove-node path="/api/package[@name='stone.controllers']" />-->
+	<remove-node path="/api/package[@name='stone.utils.encryption']" />
+	<remove-node path="/api/package[@name='stone.connections.bluetooth']" />
+	<remove-node path="/api/package[@name='stone.utils']/class[@name='InternalServiceContainerHelper.WhenMappings']" />
+
+	<!--Remove unnecessary class-->
+	<remove-node path="/api/package[@name='stone.repository.transaction']/class[@name='TransactionRepositoryImpl']" />
+	<remove-node path="/api/package[@name='stone.providers.commands.goc']/class[@name='GocRequestCommand']" />
+	<remove-node path="/api/package[@name='stone.providers']/class[@name='GenericCommandResponseReader.Companion']" />
+
+	<!--Remove unnecessary override-->
+	<remove-node path="/api/package[@name='stone.providers']/class[@name='TransactionProvider']/method[@name='getTransactionObject']" />
+	
+	<!--Remove duplicated properties-->
+	<remove-node path="/api/package[@name='stone.application.xml.classes']/class[@name='Header']/field[@name='ExchangeIdentification']" />
+	<remove-node path="/api/package[@name='stone.application.xml.classes']/class[@name='Header']/field[@name='CreationDateTime']" />
+
+	<!--Fix name conflicts-->
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Brand']/field[@name='brand']" name="name">CardBrand</attr>
+	<attr path="/api/package[@name='stone.application.enums']/class[@name='CancellationReasonEnum']/field[@name='Companion']" name="name">CompanionRef</attr>
+	<attr path="/api/package[@name='stone.application.tms']/class[@name='AcceptorConfigurationUpdate']/field[@name='statusReportData']" name="name">StatusReportDataRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='AcceptorConfiguration']/field[@name='dataSet']" name="name">DataSetRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='AcceptorConfiguration']/field[@name='POIIdentification']" name="name">POIIdentificationRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='AcceptorConfigurationUpdateData']/field[@name='acceptorConfiguration']" name="name">AcceptorConfigurationRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='AcceptorConfigurationUpdateData']/field[@name='header']" name="name">HeaderRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='AcceptorConfigurationUpdateData']/field[@name='securityTrailer']" name="name">SecurityTrailerRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='Actn']/field[@name='dataSetId']" name="name">DataSetIdRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='Actn']/field[@name='trggr']" name="name">TrggrRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='Content']/field[@name='applicationParameters']" name="name">ApplicationParametersRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='Content']/field[@name='DataSetRequired']" name="name">DataSetRequiredRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='Content']/field[@name='Errors']" name="name">ErrorsRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='Content']/field[@name='Event']" name="name">EventRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='Content']/field[@name='hostCommunicationParameters']" name="name">HostCommunicationParametersRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='Content']/field[@name='merchantParameters']" name="name">MerchantParametersRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='Content']/field[@name='PoiComponent']" name="name">PoiComponentRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='DataSet']/field[@name='content']" name="name">ContentRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='DataSet']/field[@name='Identification']" name="name">IdentificationRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='DataSet']/field[@name='SequenceCounter']" name="name">SequenceCounterRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='DataSetId']/field[@name='Nm']" name="name">NmRef</attr>
+	<attr path="/api/package[@name='stone.application.tms.subclass']/class[@name='DataSetId']/field[@name='Vrsn']" name="name">VrsnRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AcceptorAuthorisationRequest']/field[@name='data']" name="name">DataRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AcceptorAuthorisationRequestData']/field[@name='AuthorisationRequest']" name="name">AuthorisationRequestRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AcceptorAuthorisationRequestData']/field[@name='Header']" name="name">HeaderRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AcceptorAuthorisationResponse']/field[@name='acceptorRejection']" name="name">AcceptorRejectionRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AcceptorAuthorisationResponse']/field[@name='data']" name="name">DataRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AcceptorAuthorisationResponseData']/field[@name='AuthorisationResponse']" name="name">AuthorisationResponseRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AcceptorAuthorisationResponseData']/field[@name='Header']" name="name">HeaderRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AcceptorCancellationAdvice']/field[@name='data']" name="name">DataRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AcceptorCancellationAdviceData']/field[@name='AcceptorCancellationAdvice']" name="name">AcceptorCancellationAdviceRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AcceptorCancellationAdviceData']/field[@name='Header']" name="name">HeaderRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AcceptorCancellationAdviceResponse']/field[@name='data']" name="name">DataRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AcceptorCancellationAdviceResponseData']/field[@name='CancellationAdviceResponse']" name="name">CancellationAdviceResponseRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AcceptorCancellationAdviceResponseData']/field[@name='Header']" name="name">HeaderRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AcceptorCancellationAdviceResponseEnviroment']/field[@name='MerchantIdentification']" name="name">MerchantIdentificationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AcceptorRejection']/field[@name='data']" name="name">DataRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AcceptorRejectionData']/field[@name='header']" name="name">HeaderRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AcceptorRejectionData']/field[@name='rejection']" name="name">RejectionRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Action']/field[@name='ActionType']" name="name">ActionTypeRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Action']/field[@name='MessageToPresent']" name="name">MessageToPresentRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AuthenticationData']/field[@name='authenticationMethod']" name="name">AuthenticationMethodRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AuthenticationData']/field[@name='cardholderOnLinePIN']" name="name">CardholderOnLinePINRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AuthorisationRequestData']/field[@name='Environment']" name="name">EnvironmentRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AuthorisationRequestData']/field[@name='transaction']" name="name">TransactionRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AuthorisationResponseData']/field[@name='Environment']" name="name">EnvironmentRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AuthorisationResponseData']/field[@name='Transaction']" name="name">TransactionRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AuthorisationResponseData']/field[@name='TransactionResponse']" name="name">TransactionResponseRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AuthorisationResultData']/field[@name='AuthorisationCode']" name="name">AuthorisationCodeRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AuthorisationResultData']/field[@name='CompletionRequired']" name="name">CompletionRequiredRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='AuthorisationResultData']/field[@name='ResponseToAuthorisation']" name="name">ResponseToAuthorisationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Balance']/field[@name='amount']" name="name">AmountRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='CancellationAdviceData']/field[@name='Environment']" name="name">EnvironmentRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='CancellationAdviceData']/field[@name='transaction']" name="name">TransactionRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='CancellationAdviceResponseData']/field[@name='Enviroment']" name="name">EnviromentRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='CancellationAdviceResponseData']/field[@name='Transaction']" name="name">TransactionRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='CancellationAdviceResponseData']/field[@name='TransactionResponseData']" name="name">TransactionResponseDataRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='CardData']/field[@name='plainCardData']" name="name">PlainCardDataRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='CardholderIdentificationData']/field[@name='authentication']" name="name">AuthenticationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='CardholderIdentificationData']/field[@name='cardholderIdentification']" name="name">CardholderIdentificationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='CardholderIdentificationData']/field[@name='cardholderIdentificationType']" name="name">CardholderIdentificationTypeRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='CardholderOnLinePINData']/field[@name='encryptedPINBlock']" name="name">EncryptedPINBlockRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='ContextData']/field[@name='paymentContext']" name="name">PaymentContextRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='ContextData']/field[@name='saleContext']" name="name">SaleContextRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='DetailedAmount']/field[@name='MyProperty']" name="name">MyPropertyRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='EncryptedContentData']/field[@name='encryptedData']" name="name">EncryptedDataRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='EncryptedPINBlockData']/field[@name='contentType']" name="name">ContentTypeRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='EncryptedPINBlockData']/field[@name='envelopedData']" name="name">EnvelopedDataRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='EnvelopedDataData']/field[@name='encryptedContent']" name="name">EncryptedContentRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='EnvelopedDataData']/field[@name='recipient']" name="name">RecipientRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Enviroment']/field[@name='card']" name="name">CardRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Enviroment']/field[@name='cardholderIdentification']" name="name">CardholderIdentificationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Enviroment']/field[@name='merchant']" name="name">MerchantRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Enviroment']/field[@name='MerchantIdentification']" name="name">MerchantIdentificationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Enviroment']/field[@name='poi']" name="name">PoiRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='GenericIdentification']/field[@name='Identification']" name="name">IdentificationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='GenericIdentification']/field[@name='Issuer']" name="name">IssuerRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='GenericIdentification']/field[@name='ShortName']" name="name">ShortNameRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='GenericIdentification']/field[@name='Type']" name="name">TypeRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Header']/field[@name='creationDateTime']" name="name">CreationDateTimeRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Header']/field[@name='DownloadTransfer']" name="name">DownloadTransferRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Header']/field[@name='exchangeIdentification']" name="name">ExchangeIdentificationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Header']/field[@name='FormatVersion']" name="name">FormatVersionRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Header']/field[@name='InitiatingParty']" name="name">InitiatingPartyRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Header']/field[@name='MessageFunction']" name="name">MessageFunctionRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Header']/field[@name='ProtocolVersion']" name="name">ProtocolVersionRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Header']/field[@name='RecipientParty']" name="name">RecipientPartyRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Header']/field[@name='traceability']" name="name">TraceabilityRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='KekData']/field[@name='EncryptedKey']" name="name">EncryptedKeyRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='KekData']/field[@name='kekIdentification']" name="name">KekIdentificationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='KekIdentificationData']/field[@name='derivationIdentification']" name="name">DerivationIdentificationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='MerchantData']/field[@name='categoryCode']" name="name">CategoryCodeRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='MerchantData']/field[@name='identification']" name="name">IdentificationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='MessageToPresentData']/field[@name='MessageContent']" name="name">MessageContentRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='MessageToPresentData']/field[@name='MessageDestination']" name="name">MessageDestinationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='OriginalTransactionData']/field[@name='initiatorTransactionIdentification']" name="name">InitiatorTransactionIdentificationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='OriginalTransactionData']/field[@name='recipientTransactionIdentification']" name="name">RecipientTransactionIdentificationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='PaymentContextData']/field[@name='attendanceContext']" name="name">AttendanceContextRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='PaymentContextData']/field[@name='attendantLanguage']" name="name">AttendantLanguageRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='PaymentContextData']/field[@name='attendantMessageCapable']" name="name">AttendantMessageCapableRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='PaymentContextData']/field[@name='cardDataEntryMode']" name="name">CardDataEntryModeRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='PaymentContextData']/field[@name='cardholderPresent']" name="name">CardholderPresentRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='PaymentContextData']/field[@name='cardPresent']" name="name">CardPresentRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='PaymentContextData']/field[@name='fallbackIndicator']" name="name">FallbackIndicatorRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='PaymentContextData']/field[@name='onLineContext']" name="name">OnLineContextRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='PaymentContextData']/field[@name='transactionChannel']" name="name">TransactionChannelRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='PaymentContextData']/field[@name='transactionEnvironment']" name="name">TransactionEnvironmentRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='PlainCardData']/field[@name='cardSecurityCode']" name="name">CardSecurityCodeRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='PlainCardData']/field[@name='cardSequenceNumber']" name="name">CardSequenceNumberRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='PlainCardData']/field[@name='expiryDate']" name="name">ExpiryDateRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='PlainCardData']/field[@name='pan']" name="name">PanRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='PlainCardData']/field[@name='trackData']" name="name">TrackDataRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='PoiData']/field[@name='Identification']" name="name">IdentificationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='PoiData']/field[@name='SystemName']" name="name">SystemNameRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='ProductData']/field[@name='additionalProductInformation']" name="name">AdditionalProductInformationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='ProductData']/field[@name='productAmount']" name="name">ProductAmountRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='ProductData']/field[@name='productCode']" name="name">ProductCodeRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='ProductData']/field[@name='productQuantity']" name="name">ProductQuantityRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='ProductData']/field[@name='taxType']" name="name">TaxTypeRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='ProductData']/field[@name='unitOfMeasure']" name="name">UnitOfMeasureRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='ProductData']/field[@name='unitPrice']" name="name">UnitPriceRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='RecurringTransactionData']/field[@name='instalmentType']" name="name">InstalmentTypeRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='RecurringTransactionData']/field[@name='totalNumberOfPayments']" name="name">TotalNumberOfPaymentsRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Rejection']/field[@name='additionalInformation']" name="name">AdditionalInformationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Rejection']/field[@name='messageInError']" name="name">MessageInErrorRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='Rejection']/field[@name='rejectReason']" name="name">RejectReasonRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='ResponseToAuthorisationData']/field[@name='Response']" name="name">ResponseRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='ResponseToAuthorisationData']/field[@name='ResponseReason']" name="name">ResponseReasonRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TrackData']/field[@name='trackNumber']" name="name">TrackNumberRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TrackData']/field[@name='trackValue']" name="name">TrackValueRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionData']/field[@name='additionalTransactionData']" name="name">AdditionalTransactionDataRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionData']/field[@name='initiatorTransactionIdentification']" name="name">InitiatorTransactionIdentificationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionData']/field[@name='merchantCategoryCode']" name="name">MerchantCategoryCodeRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionData']/field[@name='originalTransaction']" name="name">OriginalTransactionRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionData']/field[@name='recipientTransactionIdentification']" name="name">RecipientTransactionIdentificationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionData']/field[@name='responseCode']" name="name">ResponseCodeRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionData']/field[@name='transactionCapture']" name="name">TransactionCaptureRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionData']/field[@name='transactionDetails']" name="name">TransactionDetailsRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionData']/field[@name='transactionIdentification']" name="name">TransactionIdentificationRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionDetailsData']/field[@name='accountType']" name="name">AccountTypeRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionDetailsData']/field[@name='cancellationReason']" name="name">CancellationReasonRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionDetailsData']/field[@name='currency']" name="name">CurrencyRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionDetailsData']/field[@name='DetailedAmount']" name="name">DetailedAmountRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionDetailsData']/field[@name='iccRelatedData']" name="name">IccRelatedDataRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionDetailsData']/field[@name='product']" name="name">ProductRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionDetailsData']/field[@name='recurringTransaction']" name="name">RecurringTransactionRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionDetailsData']/field[@name='totalAmount']" name="name">TotalAmountRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionDetailsData']/field[@name='validityDate']" name="name">ValidityDateRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionIdentificationData']/field[@name='transactionDateTime']" name="name">TransactionDateTimeRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionIdentificationData']/field[@name='transactionReference']" name="name">TransactionReferenceRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionResponseData']/field[@name='Action']" name="name">ActionRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionResponseData']/field[@name='AuthorisationResult']" name="name">AuthorisationResultRef</attr>
+	<attr path="/api/package[@name='stone.application.xml.classes']/class[@name='TransactionResponseData']/field[@name='balance']" name="name">BalanceRef</attr>
+	<attr path="/api/package[@name='stone.providers']/class[@name='BaseTransactionProvider']/field[@name='messageFromAuthorize']" name="name">MessageFromAuthorizeRef</attr>
+	<attr path="/api/package[@name='stone.providers.commands']/class[@name='CommandRequestAbstract']/field[@name='command']" name="name">CommandRef</attr>
+	<attr path="/api/package[@name='stone.providers.commands']/class[@name='CommandRequestAbstract']/field[@name='commandId']" name="name">CommandIdRef</attr>
+	<attr path="/api/package[@name='stone.utils']/class[@name='RequestAsyncTaskAbstract']/field[@name='connectionCallback']" name="name">ConnectionCallbackRef</attr>
+	<attr path="/api/package[@name='stone.utils']/class[@name='GlobalInformations']/field[@name='pinpadObjectList']" name="name">PinpadObjectListRef</attr>
+	<attr path="/api/package[@name='stone.providers']/class[@name='ActiveApplicationProvider']/field[@name='Companion']" name="name">CompanionRef</attr>
+	<attr path="/api/package[@name='stone.providers.commands.gcr']/class[@name='GcrResponseCommand']/field[@name='Companion']" name="name">CompanionRef</attr>
+	<attr path="/api/package[@name='stone.providers']/class[@name='XmlBuilder']/field[@name='Companion']" name="name">CompanionRef</attr>
+	<attr path="/api/package[@name='stone.utils']/class[@name='CacheHelper']/field[@name='Companion']" name="name">CompanionRef</attr>
+	<attr path="/api/package[@name='stone.utils.card']/class[@name='CardVerificationFactory']/field[@name='Companion']" name="name">CompanionRef</attr>
+	
 </metadata>

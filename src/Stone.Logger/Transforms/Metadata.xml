@@ -1,0 +1,19 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+	<!--Fix parameter type-->
+	<add-node path="/api/package[@name='br.com.stone.logger']/class[@name='LoggerBuilder']">
+		<method abstract="false" deprecated="not deprecated" final="false" name="SetAdditionalInfo" native="false" return="BR.Com.Stone.Logger.IStepsEnvironment" static="false" synchronized="false" visibility="public">
+			<parameter name="map" type="java.util.HashMap&lt;java.lang.String, java.lang.String&gt;">
+			</parameter>
+		</method>
+	</add-node>
+
+	<!--Fix name conflicts-->
+	<attr path="/api/package[@name='br.com.stone.logger']/class[@name='Logger']/field[@name='Companion']" name="name">CompanionRef</attr>
+</metadata>

@@ -6,4 +6,59 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+
+	<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="Result" static="false" visibility="public" jni-signature="Lbr/com/stone/payment/domain/datamodel/Result;">
+		<implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable" jni-type="Landroid/os/Parcelable;">
+		</implements>
+		<constructor deprecated="not deprecated" final="false" name="Result" jni-signature="(Landroid/os/Parcel;)V" bridge="false" static="false" type="br.com.stone.payment.domain.datamodel.Result" synthetic="false" visibility="protected">
+			<parameter name="in" type="android.os.Parcel" jni-type="Landroid/os/Parcel;">
+			</parameter>
+		</constructor>
+		<constructor deprecated="not deprecated" final="false" name="Result" jni-signature="(IILjava/lang/String;)V" bridge="false" static="false" type="br.com.stone.payment.domain.datamodel.Result" synthetic="false" visibility="public">
+			<parameter name="resultCode" type="int" jni-type="I">
+			</parameter>
+			<parameter name="categoryCode" type="int" jni-type="I">
+			</parameter>
+			<parameter name="message" type="java.lang.String" jni-type="Ljava/lang/String;">
+			</parameter>
+		</constructor>
+		<method abstract="false" deprecated="not deprecated" final="false" name="builder" jni-signature="()Lbr/com/stone/payment/domain/datamodel/Result$ResultBuilder;" bridge="false" native="false" return="br.com.stone.payment.domain.datamodel.Result.ResultBuilder" jni-return="Lbr/com/stone/payment/domain/datamodel/Result$ResultBuilder;" static="true" synchronized="false" synthetic="false" visibility="public">
+		</method>
+		<method abstract="false" deprecated="not deprecated" final="false" name="canEqual" jni-signature="(Ljava/lang/Object;)Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="protected">
+			<parameter name="other" type="java.lang.Object" jni-type="Ljava/lang/Object;">
+			</parameter>
+		</method>
+		<method abstract="false" deprecated="not deprecated" final="false" name="describeContents" jni-signature="()I" bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public">
+		</method>
+		<method abstract="false" deprecated="not deprecated" final="false" name="getCategoryCode" jni-signature="()I" bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public">
+		</method>
+		<method abstract="false" deprecated="not deprecated" final="false" name="getMessage" jni-signature="()Ljava/lang/String;" bridge="false" native="false" return="java.lang.String" jni-return="Ljava/lang/String;" static="false" synchronized="false" synthetic="false" visibility="public">
+		</method>
+		<method abstract="false" deprecated="not deprecated" final="false" name="getResultCode" jni-signature="()I" bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public">
+		</method>
+		<method abstract="false" deprecated="not deprecated" final="false" name="readFromParcel" jni-signature="(Landroid/os/Parcel;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+			<parameter name="in" type="android.os.Parcel" jni-type="Landroid/os/Parcel;">
+			</parameter>
+		</method>
+		<method abstract="false" deprecated="not deprecated" final="false" name="setCategoryCode" jni-signature="(I)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+			<parameter name="categoryCode" type="int" jni-type="I">
+			</parameter>
+		</method>
+		<method abstract="false" deprecated="not deprecated" final="false" name="setMessage" jni-signature="(Ljava/lang/String;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+			<parameter name="message" type="java.lang.String" jni-type="Ljava/lang/String;">
+			</parameter>
+		</method>
+		<method abstract="false" deprecated="not deprecated" final="false" name="setResultCode" jni-signature="(I)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+			<parameter name="resultCode" type="int" jni-type="I">
+			</parameter>
+		</method>
+		<method abstract="false" deprecated="not deprecated" final="false" name="writeToParcel" jni-signature="(Landroid/os/Parcel;I)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+			<parameter name="dest" type="android.os.Parcel" jni-type="Landroid/os/Parcel;">
+			</parameter>
+			<parameter name="flags" type="int" jni-type="I">
+			</parameter>
+		</method>
+		<field deprecated="not deprecated" final="true" name="CREATOR" jni-signature="Landroid/os/Parcelable$Creator;" static="true" transient="false" type="android.os.Parcelable.Creator" type-generic-aware="android.os.Parcelable.Creator&lt;br.com.stone.payment.domain.datamodel.Result&gt;" visibility="public" volatile="false">
+		</field>
+	</class>
 </metadata>
